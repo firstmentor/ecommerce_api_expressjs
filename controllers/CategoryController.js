@@ -12,7 +12,6 @@ class CategoryController {
     static getAllCategories = async (req, res) => {
         try {
             const allCategories = await categoryModel.find()
-            throw new Error("some error")
             res.status(200).json({
                 success: true,
                 allCategories
