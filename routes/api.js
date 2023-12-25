@@ -12,7 +12,7 @@ const router = express.Router()
 //UserController API Route
 router.post('/register', UserController.registerUser)
 router.post('/userLogin', UserController.loginUser)
-router.post('/updatePassword/:id', ChangeUserAuth, UserController.updatePassword)
+router.post('/updatePassword', ChangeUserAuth, UserController.updatePassword)
 router.get('/logout', UserController.logout)
 router.get('/me', ChangeUserAuth, UserController.getUserDetail)
 
