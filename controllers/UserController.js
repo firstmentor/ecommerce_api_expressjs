@@ -154,7 +154,7 @@ class UserController {
         try {
             //console.log(req.body)
             if (req.file) {
-                const user = await userModel.findById(req.user.id);
+                const user = await UserModel.findById(req.user.id);
                 const image_id = user.avatar.public_id;
                 await cloudinary.uploader.destroy(image_id);
 
@@ -178,7 +178,7 @@ class UserController {
                 };
             }
 
-            const updateuserprofile = await userModel.findByIdAndUpdate(
+            const updateuserprofile = await UserModel.findByIdAndUpdate(
                 req.user.id,
                 data
             );

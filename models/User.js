@@ -6,16 +6,16 @@ const userSchema = new mongoose.Schema({
     require: true
 
   },
-  userName: {
-    type: String,
-    require: true
+  // userName: {
+  //   type: String,
+  //   require: true
 
-  },
-  phone: {
-    type: String,
-    require: true
+  // },
+  // phone: {
+  //   type: String,
+  //   require: true
 
-  },
+  // },
   email: {
     type: String,
     require: true
@@ -26,21 +26,21 @@ const userSchema = new mongoose.Schema({
     require: true
 
   },
-  city: {
-    type: String,
-    require: true
+  // city: {
+  //   type: String,
+  //   require: true
 
-  },
-  state: {
-    type: String,
-    require: true
+  // },
+  // state: {
+  //   type: String,
+  //   require: true
 
-  },
-  country: {
-    type: String,
-    require: true
+  // },
+  // country: {
+  //   type: String,
+  //   require: true
 
-  },
+  // },
   avatar: {
     public_id: {
       type: String,
