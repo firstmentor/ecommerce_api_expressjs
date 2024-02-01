@@ -46,8 +46,8 @@ router.get('/getCategoriesDetail/:id', CategoryController.getCategoryDetail)
 
 
 //payment
-router.post('/payment/process', ChangeUserAuth, PaymentController.processPayment)
-router.get('/stripeapiKey', ChangeUserAuth, PaymentController.sendStripeApiKey)
+router.post('/payment/process', PaymentController.processPayment)
+router.get('/stripeapiKey', PaymentController.sendStripeApiKey)
 
 
 
