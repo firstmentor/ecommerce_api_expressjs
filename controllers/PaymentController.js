@@ -6,10 +6,10 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 class PaymentController{
     static processPayment = async (req, res) => {
-        //console.log(req.body)
+        console.log(req.body)
         const mypayment = await stripe.paymentIntents.create({
             amount: req.body.amount,
-            currency: "inr",
+            currency: "INR",
             metadata: {
                 company: "Ecommerce"
             }

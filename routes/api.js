@@ -32,11 +32,11 @@ router.post('/product/updateProduct', ProductController.updateProduct)
 router.get('/product/deleteProduct/:id', ProductController.deleteProduct)
 
 //OrderController
-router.post('/order/create', OrderController.newOrder)
-router.get('/order/getSingleOrder/:id', OrderController.getSingleOrder)
-router.get('/order/myOrder', OrderController.myOrder)
-router.get('/order/getAllOrders', OrderController.getAllOrders)
-router.get('/order/deleteOrder/:id', OrderController.deleteOrder)
+router.post('/order/create',ChangeUserAuth, OrderController.newOrder)
+router.get('/order/getSingleOrder/:id',ChangeUserAuth, OrderController.getSingleOrder)
+router.get('/order/myOrder',ChangeUserAuth, OrderController.myOrder)
+router.get('/order/getAllOrders',ChangeUserAuth, OrderController.getAllOrders)
+router.get('/order/deleteOrder/:id', ChangeUserAuth,OrderController.deleteOrder)
 
 
 //CategoryController
