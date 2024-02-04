@@ -26,7 +26,13 @@ class OrderController{
     }
     static getSingleOrder = async(req,res) => {
         try{
-            const data = await OrderModel.findById(req.params.id)
+            //const data = await OrderModel.findById(req.params.id)
+            const data = await OrderModel.findById(req.params.id).populate(
+                "user",
+                "name email"
+              );
+            
+            
             res.status(200).json({
                 success: true,
                 data
