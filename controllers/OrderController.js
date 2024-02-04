@@ -29,7 +29,7 @@ class OrderController{
             //const data = await OrderModel.findById(req.params.id)
             const data = await OrderModel.findById(req.params.id).populate(
                 "user",
-                "name email"
+                "name"
               );
             
             
